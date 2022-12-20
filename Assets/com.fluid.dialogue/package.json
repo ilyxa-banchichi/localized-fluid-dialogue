@@ -9,7 +9,6 @@
     "com.fluid.unity-event-plus": "1.1.0",
     "com.fluid.simple-spellcheck": "1.1.0",
     "com.fluid.find-and-replace": "1.0.1",
-    "com.gameslab.unity-localization-package-extention": "https://github.com/ilyxa-banchichi/UnityLocalizationPackageExtention.git?path=/Assets/#1.0.3",
     "com.unity.localization": "1.4.2"
   },
   "repository": {

@@ -21,13 +21,14 @@ namespace CleverCrow.Fluid.Dialogues.Editors {
                 if (graph == null) continue;
 
                 foreach (var node in graph.Nodes) {
-                    if (IsValid(node.Text ?? "")) {
-                        var result = new DialogueSearchResult(node.Text, node as UnityEngine.Object);
+                    // ToDo if (IsValid(node.Text ?? "")) {
+                    if (IsValid(node.Text.GetLocalizedString())) {
+                        var result = new DialogueSearchResult(node.Text.GetLocalizedString(), node as UnityEngine.Object);
                         results.Add(result);
                     }
 
                     foreach (var choice in node.Choices) {
-                        var result = new ChoiceSearchResult(choice.text, choice);
+                        var result = new ChoiceSearchResult(choice.text.GetLocalizedString(), choice);
                         results.Add(result);
                     }
                 }

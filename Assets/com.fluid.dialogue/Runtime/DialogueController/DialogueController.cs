@@ -5,6 +5,7 @@ using CleverCrow.Fluid.Dialogues.Choices;
 using CleverCrow.Fluid.Dialogues.Graphs;
 using CleverCrow.Fluid.Dialogues.Nodes;
 using UnityEngine;
+using UnityEngine.Localization;
 
 namespace CleverCrow.Fluid.Dialogues {
     public interface IDialogueController {
@@ -42,7 +43,6 @@ namespace CleverCrow.Fluid.Dialogues {
             Stop();
 
             playback.Events.Speak.AddListener(TriggerSpeak);
-            playback.Events.SpeakWithAudio.AddListener(TriggerSpeakWithAudio);
             playback.Events.Choice.AddListener(TriggerChoice);
             playback.Events.NodeEnter.AddListener(TriggerEnterNode);
             playback.Events.Begin.AddListener(TriggerBegin);
@@ -82,7 +82,6 @@ namespace CleverCrow.Fluid.Dialogues {
                 parentDialogue.Next();
             });
             playback.Events.Speak.AddListener(TriggerSpeak);
-            playback.Events.SpeakWithAudio.AddListener(TriggerSpeakWithAudio);
             playback.Events.Choice.AddListener(TriggerChoice);
             playback.Events.NodeEnter.AddListener(TriggerEnterNode);
 
@@ -104,15 +103,11 @@ namespace CleverCrow.Fluid.Dialogues {
             Events.End.Invoke();
         }
 
-        private void TriggerSpeakWithAudio (IActor actor, string text, AudioClip audioClip) {
-            Events.SpeakWithAudio.Invoke(actor, text, audioClip);
-        }
-
-        private void TriggerSpeak (IActor actor, string text) {
+        private void TriggerSpeak (IActor actor, LocalizedString text) {
             Events.Speak.Invoke(actor, text);
         }
 
-        private void TriggerChoice (IActor actor, string text, List<IChoice> choices) {
+        private void TriggerChoice (IActor actor, LocalizedString text, List<IChoice> choices) {
             Events.Choice.Invoke(actor, text, choices);
         }
 

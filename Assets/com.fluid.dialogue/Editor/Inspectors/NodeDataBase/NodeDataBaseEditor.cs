@@ -57,7 +57,7 @@ namespace CleverCrow.Fluid.Dialogues.Editors.Inspectors {
             if (choices != null) {
                 for (var i = 0; i < choices.arraySize; i++) {
                     var choice = choices.GetArrayElementAtIndex(i).objectReferenceValue as ChoiceData;
-                    SpellCheck.Instance.AddValidation($"Choice {i}", choice.text);
+                    SpellCheck.Instance.AddValidation($"Choice {i}", choice.text.GetLocalizedString());
                 }
             }
         }

@@ -85,7 +85,7 @@ Fluid Dialogue is used through [Unity's Package Manager](https://docs.unity3d.co
     }
   ],
   "dependencies": {
-        "com.fluid.dialogue": "https://github.com/ilyxa-banchichi/localized-fluid-dialogue.git?path=/Assets/com.fluid.dialogue/#v2.5.0-localized",
+    "com.fluid.dialogue": "https://github.com/ilyxa-banchichi/localized-fluid-dialogue.git?path=/Assets/com.fluid.dialogue/#v2.5.0-localized",
     "com.gameslab.unity-localization-package-extention": "https://github.com/ilyxa-banchichi/UnityLocalizationPackageExtention.git?path=/#1.0.2",
     "com.fluid.database": "2.0.0",
     "com.fluid.find-and-replace": "1.0.1",

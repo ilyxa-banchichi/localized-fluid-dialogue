@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using CleverCrow.Fluid.Dialogues.Graphs;
 using CleverCrow.Fluid.Dialogues.Nodes;
-using Gameslab.UnityLocalizationExtention;
+using Gameslab.UnityLocalizationExtension;
 using UnityEngine;
 using UnityEngine.Localization;
 

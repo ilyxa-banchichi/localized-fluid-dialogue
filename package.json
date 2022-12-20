@@ -1,8 +1,8 @@
 {
-  "name": "com.fluid.dialogue",
+  "name": "com.fluid.localized-dialogue",
   "version": "0.0.0",
   "unity": "2019.1",
-  "displayName": "Fluid Dialogue",
+  "displayName": "Fluid Localized Dialogue",
   "description": "A Unity dialogue system that features an easy to use drag and drop graph. ScriptableObject driven with the ability to write custom actions and conditions to create complex dialogue workflows.",
   "main": "build.js",
   "scripts": {
@@ -13,7 +13,8 @@
   "keywords": [
   "unity",
   "dialogue",
-  "dialogue system"
+  "dialogue system",
+  "localized dialogue system"
 ],
   "husky": {
     "hooks": {
@@ -22,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ashblue/fluid-dialogue.git"
+    "url": "git+https://github.com/ilyxa-banchichi/localized-fluid-dialogue.git"
   },
   "author": {
     "name": "Ash Blue",
@@ -31,9 +32,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ashblue/fluid-dialogue/issues"
+    "url": "https://github.com/ilyxa-banchichi/localized-fluid-dialogue/issues"
   },
-  "homepage": "https://github.com/ashblue/fluid-dialogue#readme",
+  "homepage": "https://github.com/ilyxa-banchichi/localized-fluid-dialogue#readme",
   "devDependencies": {
     "@commitlint/cli": "~17.1.2",
     "@commitlint/config-conventional": "~17.1.0",

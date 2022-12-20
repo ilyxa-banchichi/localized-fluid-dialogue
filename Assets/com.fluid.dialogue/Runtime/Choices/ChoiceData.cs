@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using CleverCrow.Fluid.Dialogues.Graphs;
 using CleverCrow.Fluid.Dialogues.Nodes;
+using Gameslab.UnityLocalizationExtention;
 using UnityEngine;
+using UnityEngine.Localization;
 
 namespace CleverCrow.Fluid.Dialogues.Choices {
     public class ChoiceData : ScriptableObject, IGetRuntime<IChoice>, IConnectionChildCollection {
-        public string text;
+        public SimpleLocalizedString text;
 
         [HideInInspector]
         public List<NodeDataBase> children = new List<NodeDataBase>();

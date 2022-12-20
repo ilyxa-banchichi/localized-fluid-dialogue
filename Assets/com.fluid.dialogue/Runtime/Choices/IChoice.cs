@@ -1,8 +1,9 @@
 using CleverCrow.Fluid.Dialogues.Nodes;
+using UnityEngine.Localization;
 
 namespace CleverCrow.Fluid.Dialogues.Choices {
     public interface IChoice : IUniqueId {
-        string Text { get; }
+        LocalizedString Text { get; }
         bool IsValid { get; }
 
         INode GetValidChildNode ();

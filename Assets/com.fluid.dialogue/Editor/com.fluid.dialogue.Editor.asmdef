@@ -1,9 +1,12 @@
 {
     "name": "com.fluid.dialogue.Editor",
+    "rootNamespace": "",
     "references": [
         "com.fluid.dialogue",
         "com.fluid.simple-spellcheck.Editor",
-        "com.fluid.find-and-replace.Editor"
+        "com.fluid.find-and-replace.Editor",
+        "Unity.Localization",
+        "Unity.Localization.Editor"
     ],
     "includePlatforms": [
         "Editor"

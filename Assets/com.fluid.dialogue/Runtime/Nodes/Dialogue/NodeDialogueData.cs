@@ -1,18 +1,20 @@
+using System;
 using System.Linq;
 using CleverCrow.Fluid.Dialogues.Graphs;
+using Gameslab.UnityLocalizationExtention;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Localization;
 
 namespace CleverCrow.Fluid.Dialogues.Nodes {
     [CreateMenu("Dialogue", 1)]
     public class NodeDialogueData : NodeDataChoiceBase {
         public ActorDefinition actor;
-        public AudioClip audio;
 
-        [TextArea]
-        public string dialogue;
-
+        public SimpleLocalizedString dialogue;
+        
         protected override string DefaultName => "Dialogue";
-        public override string Text => dialogue;
+        public override LocalizedString Text => dialogue;
 
         public override INode GetRuntime (IGraph graphRuntime, IDialogueController controller) {
             return new NodeDialogue(
@@ -20,7 +22,6 @@ namespace CleverCrow.Fluid.Dialogues.Nodes {
                 UniqueId,
                 actor,
                 dialogue,
-                audio,
                 children.ToList<INodeData>(),
                 choices.Select(c => c.GetRuntime(graphRuntime, controller)).ToList(),
                 conditions.Select(c => c.GetRuntime(graphRuntime, controller)).ToList(),

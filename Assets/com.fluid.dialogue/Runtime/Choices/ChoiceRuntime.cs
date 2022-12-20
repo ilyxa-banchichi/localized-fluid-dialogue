@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using CleverCrow.Fluid.Dialogues.Graphs;
 using CleverCrow.Fluid.Dialogues.Nodes;
+using UnityEngine.Localization;
 
 namespace CleverCrow.Fluid.Dialogues.Choices {
     public class ChoiceRuntime : IChoice {
@@ -10,14 +11,14 @@ namespace CleverCrow.Fluid.Dialogues.Choices {
         private List<INode> _childrenRuntimeCache;
 
         public string UniqueId { get; }
-        public string Text { get; }
+        public LocalizedString Text { get; }
         public bool IsValid => Children.Count == 0 || Children.Find(c => c.IsValid) != null;
 
         private List<INode> Children =>
             _childrenRuntimeCache ??
             (_childrenRuntimeCache = _children.Select(_runtime.GetCopy).ToList());
 
-        public ChoiceRuntime (IGraph runtime, string text, string uniqueId, List<INodeData> children) {
+        public ChoiceRuntime (IGraph runtime, LocalizedString text, string uniqueId, List<INodeData> children) {
             _runtime = runtime;
             Text = text;
             UniqueId = uniqueId;

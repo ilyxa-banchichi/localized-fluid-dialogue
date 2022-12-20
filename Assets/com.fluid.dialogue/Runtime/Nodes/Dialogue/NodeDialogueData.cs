@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 using CleverCrow.Fluid.Dialogues.Graphs;
-using Gameslab.UnityLocalizationExtention;
+using Gameslab.UnityLocalizationExtension;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Localization;
@@ -12,7 +12,7 @@ namespace CleverCrow.Fluid.Dialogues.Nodes {
         public ActorDefinition actor;
 
         public SimpleLocalizedString dialogue;
-        
+
         protected override string DefaultName => "Dialogue";
         public override LocalizedString Text => dialogue;
 

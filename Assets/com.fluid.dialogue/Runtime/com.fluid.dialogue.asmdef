@@ -1,9 +1,11 @@
 {
     "name": "com.fluid.dialogue",
+    "rootNamespace": "",
     "references": [
         "com.fluid.database",
         "com.fluid.unity-event-plus",
-        "com.fluid.simple-singleton"
+        "com.fluid.simple-singleton",
+        "Unity.Localization"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

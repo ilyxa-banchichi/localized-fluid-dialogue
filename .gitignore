@@ -72,3 +72,6 @@ crashlytics-build.properties
 node_modules
 dist
 dist.zip
+
+# Mac os system file
+*.DS_Store

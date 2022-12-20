@@ -50,7 +50,7 @@ namespace CleverCrow.Fluid.Dialogues.Editors.Inspectors {
             if (choiceProp != null) {
                 for (var j = 0; j < choiceProp.arraySize; j++) {
                     var choice = choiceProp.GetArrayElementAtIndex(j).objectReferenceValue as ChoiceData;
-                    choiceIsInvalid = SpellCheck.Instance.IsInvalid(choice.text);
+                    choiceIsInvalid = SpellCheck.Instance.IsInvalid(choice.text.GetLocalizedString());
                     if (choiceIsInvalid) break;
                 }
             }

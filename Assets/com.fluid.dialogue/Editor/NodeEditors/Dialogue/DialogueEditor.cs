@@ -9,7 +9,7 @@ namespace CleverCrow.Fluid.Dialogues.Editors.NodeDisplays {
 
         protected override Color NodeColor { get; } = new Color(0.28f, 0.75f, 0.34f);
         protected override float NodeWidth { get; } = 200;
-
+        
         protected override void OnSetup () {
             _choices = new ChoiceCollection(this, Data as NodeDataChoiceBase, Window);
         }

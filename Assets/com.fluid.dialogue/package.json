@@ -9,7 +9,7 @@
     "com.fluid.unity-event-plus": "1.1.0",
     "com.fluid.simple-spellcheck": "1.1.0",
     "com.fluid.find-and-replace": "1.0.1",
-    "com.unity.localization": "1.4.2"
+    "com.unity.localization": "1.3.2"
   },
   "repository": {
     "type": "git",
